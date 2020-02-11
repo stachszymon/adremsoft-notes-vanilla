@@ -1,0 +1,18 @@
+//Szymon Stach
+
+@import "inc/_variables.scss";
+
+body, html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: $col-light;
+}
+
+@import "inc/grid";
+@import "inc/header";
+@import "inc/card";
+@import "inc/button";
+@import "inc/addCartBtn";
+@import "inc/noteCreationModal";

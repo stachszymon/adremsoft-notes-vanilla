@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Note app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='stylesheet' href="styles/main.css"/>
+
+</head>
+<body>
+<div id="loader"
+     style="position: fixed; height: 100vh; width: 100%; z-index: 1000; background-color: #3B3355; color: #ffffff; display: flex; justify-content: center; align-items: center;">
+    Loading...
+</div>
+<header class="navbar">
+    <h1 class="d-flex">Notes</h1>
+    <input class="form-control" type="text" id="search" placeholder="Search">
+</header>
+<div class="container" id="notes"></div>
+<div class="noteCreationModalBg" id="noteCreationModal" style="display: none">
+    <div class="noteCreationModal">
+        <label><span>Title</span>
+            <input type="text" name="title">
+        </label>
+        <label><span>Category</span>
+            <select name="category">
+                <option value="normal">Normal</option>
+                <option value="important">Important</option>
+                <option value="disabled">Disabled</option>
+            </select>
+        </label>
+        <label><span>Subject</span>
+            <input type="text" name="subject">
+        </label>
+        <label><span>Content</span>
+            <textarea cols="30" rows="10" name="content"></textarea>
+        </label>
+        <div style="display: flex">
+            <button class="btn btn-red" onclick="handleModal('CLOSE')">Cancel</button>
+            <button class="btn" id="noteModalSaveBtn">Save</button>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('#loader').style.display = "none";
+    });
+</script>
+<script src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+$col-black: #000505;
+$col-dark: #3B3355;
+$col-mid: #8F91A2;
+$col-light: #BFCDE0;
+$col-white: #FEFCFD;
+$col-red: #D7263D;
+
+@mixin anims($time){
+  transition: all $time;
+}

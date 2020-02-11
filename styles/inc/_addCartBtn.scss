@@ -1,0 +1,30 @@
+.addCart{
+  @include anims(.2s);
+  //padding: 1rem 0;
+  height: 100%;
+}
+.addCartBtn{
+  @include anims(.2s);
+
+  height: 400px;
+  width: 100%;
+
+  background-color: transparent;
+  border: $col-white 1rem solid;
+  color: $col-white;
+  font-size: 10rem;
+
+  &:hover{
+    outline: none;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  }
+
+  &:focus{
+    outline: none;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  }
+}

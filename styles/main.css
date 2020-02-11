@@ -1,0 +1,244 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #BFCDE0;
+}
+
+.container {
+  max-width: 1640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 400px;
+  margin: 5px;
+  float: left;
+}
+
+header {
+  transition: all 2s;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  background-color: #000505;
+  color: #FEFCFD;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  padding: 0 2rem;
+  width: auto;
+}
+header input {
+  transition: all 2s;
+  padding: 0 2rem;
+  width: 20%;
+  font-size: 2rem;
+}
+header input:focus {
+  outline: none;
+  width: 60%;
+}
+
+.card {
+  transition: all 0.2s;
+  height: 400px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  background-color: #FEFCFD;
+}
+.card:hover {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+.card .cardHeader {
+  height: 18%;
+  background-color: #3B3355;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.card .cardHeader span {
+  overflow: hidden;
+}
+.card .cardHeader div {
+  display: flex;
+}
+.card .cardHeader div button:not(first-child) {
+  margin-left: 2px;
+}
+.card .cardBody {
+  height: 82%;
+  max-height: 82%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.card.important {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+.card.important .cardHeader {
+  background-color: #D7263D;
+}
+.card.important:hover {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+.card.disabled {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.card.disabled .cardHeader {
+  background-color: #8F91A2;
+}
+.card.disabled .cardHeader span {
+  text-decoration: line-through #000505;
+}
+.card.disabled:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.card p {
+  padding: 1rem;
+  margin: 0;
+  color: #3B3355;
+}
+.card .title {
+  font-size: 2rem;
+  color: #FEFCFD;
+}
+.card .subject {
+  font-size: 1.5rem;
+}
+.btn {
+  transition: all 0.2s;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #3B3355;
+  color: #FEFCFD;
+  border: none;
+}
+.btn.btn-red {
+  background-color: #D7263D;
+}
+.btn.btn-white {
+  background-color: #FEFCFD;
+}
+.btn.btn-light {
+  background-color: #BFCDE0;
+}
+.btn.btn-mid {
+  background-color: #8F91A2;
+}
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.addCart {
+  transition: all 0.2s;
+  height: 100%;
+}
+
+.addCartBtn {
+  transition: all 0.2s;
+  height: 400px;
+  width: 100%;
+  background-color: transparent;
+  border: #FEFCFD 1rem solid;
+  color: #FEFCFD;
+  font-size: 10rem;
+}
+.addCartBtn:hover {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.addCartBtn:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.noteCreationModalBg {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noteCreationModalBg.hidden {
+  display: none;
+}
+
+.noteCreationModal {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  background-color: #FEFCFD;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.noteCreationModal label {
+  margin: 1rem 0;
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.noteCreationModal label span {
+  text-align: center;
+  font-size: 1.025rem;
+  width: 15%;
+}
+.noteCreationModal label input {
+  border: none;
+  border-bottom: 1px solid #3B3355;
+}
+.noteCreationModal label input:focus {
+  outline: none;
+}
+.noteCreationModal label select, .noteCreationModal label textarea, .noteCreationModal label input {
+  width: 85%;
+  font-size: 1rem;
+}
+.noteCreationModal label select:focus, .noteCreationModal label textarea:focus, .noteCreationModal label input:focus {
+  outline: none;
+}
+.noteCreationModal label textarea {
+  resize: none;
+}
+.noteCreationModal button {
+  width: 50%;
+}
+
+/*# sourceMappingURL=main.css.map */

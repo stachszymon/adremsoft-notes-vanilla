@@ -1,0 +1,93 @@
+.card{
+  @include anims(.2s);
+
+  height: 400px;
+
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
+  &:hover{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  }
+
+  .cardHeader{
+    height: 18%;
+    background-color: $col-dark;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    overflow: hidden;
+
+    justify-content: space-between;
+
+    span{
+      overflow: hidden;
+    }
+    div{
+      display: flex;
+      button:not(first-child){
+        margin-left: 2px;
+      }
+    }
+  }
+  .cardBody{
+    height: 82%;
+    max-height: 82%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &.important {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    .cardHeader{
+      background-color: $col-red;
+    }
+    &:hover{
+      -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    }
+  }
+
+  &.disabled {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    .cardHeader{
+      background-color: $col-mid;
+      span {
+        text-decoration: line-through $col-black;
+      }
+    }
+    &:hover{
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    }
+  }
+
+  background-color: $col-white;
+
+  p{
+    padding: 1rem;
+    margin: 0;
+    color: $col-dark;
+  }
+
+  .title{
+    font-size: 2rem;
+    color: $col-white;
+  }
+  .subject{
+    font-size: 1.5rem;
+  }
+  .content{
+
+  }
+}
